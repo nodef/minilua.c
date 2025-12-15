@@ -1,0 +1,22 @@
+{
+  "name": "minilua.c",
+  "version": "5.4.7",
+  "description": "Single-file port of Lua, a powerful scripting language; Eduardo Bart (2020).",
+  "keywords": [
+    "c",
+    "library",
+    "lua",
+    "scripting",
+    "language"
+  ],
+  "homepage": "https://github.com/nodef/minilua.c#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/minilua.c/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/minilua.c.git"
+  },
+  "license": "MIT",
+  "main": "minilua.h"
+}
