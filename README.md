@@ -4,17 +4,51 @@ This is Lua contained in a single header to be bundled in C/C++ applications wit
 [Lua](https://www.lua.org/) is a powerful, efficient, lightweight, embeddable scripting language.
 This library was created by [Eduardo Bart](https://github.com/edubart).
 
+<br>
+
 ## Installation
 
 Run:
-```bash
+
+```sh
 $ npm i minilua.c
 ```
 
 And then include `minilua.h` as follows:
+
 ```c
+// main.c
+#define MINILUA_IMPLEMENTATION  // or LUA_IMPL
 #include "node_modules/minilua.c/minilua.h"
+
+int main() { /* ... */ }
 ```
+
+And then compile with `clang` or `gcc` as usual.
+
+```bash
+$ clang main.c  # or, use gcc
+$ gcc   main.c
+```
+
+You may also use a simpler approach:
+
+```c
+// main.c
+#define MINILUA_IMPLEMENTATION  // or LUA_IMPL
+#include <minilua.h>
+
+int main() { /* ... */ }
+```
+
+If you add the path `node_modules/minilua.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/minilua.c main.c  # or, use gcc
+$ gcc   -I./node_modules/minilua.c main.c
+```
+
+<br>
 
 ## Example Usage
 
@@ -34,6 +68,8 @@ int main() {
 }
 ```
 
+<br>
+
 ## Usage
 
 Include `minilua.h` to use Lua API.
@@ -52,9 +88,13 @@ therefore it is best to declare the Lua implementation in dedicated C file.
 Optionally provide the following defines:
   - `LUA_MAKE_LUA`     - implement the Lua command line REPL
 
+<br>
+
 ## Documentation
 
 For documentation on how to use Lua read its [official manual](https://www.lua.org/manual/).
+
+<br>
 
 ## Updates
 
@@ -65,10 +105,14 @@ For documentation on how to use Lua read its [official manual](https://www.lua.o
 - **03-Dec-2020**: Updated to Lua 5.4.2.
 - **27-Nov-2020**: Library created, using Lua 5.4.2-rc1.
 
+<br>
+
 ## Notes
 
 This library tries to keep up with latest official Lua release.
 The header is generated using the bash script `gen.sh` all modifications done is there.
+
+<br>
 
 ## License
 
@@ -78,6 +122,6 @@ Same license as Lua, the MIT license, see LICENSE.txt for information.
 <br>
 
 
+[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/edubart/minilua)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/minilua.c)
-[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/edubart/minilua)

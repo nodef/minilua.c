@@ -1,9 +1,6 @@
-# Library files
-minilua
-minilua.h
-
-# Build directory
+# Build artifacts
 .build/
+*.exe
 
 # Logs
 logs
